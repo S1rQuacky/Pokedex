@@ -8,8 +8,10 @@ app.use(express.static("public"))
 
 //INDEX
 app.get('/pokedex/', (req, res) => {
-    res.render('index.ejs')
-})
+        res.render('index.ejs', {poke: Pokedex})
+    })
+    
+
 
 app.listen(PORT, () => {
     console.log(`Gotta catch'em all on port ${PORT}`)
