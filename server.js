@@ -10,8 +10,22 @@ app.use(express.static("public"))
 app.get('/pokedex/', (req, res) => {
         res.render('index.ejs', {poke: Pokedex})
     })
+
+//NEW
+
+//DESTROY
+
+//UPDATE
+
+//CREATE
+
+//EDIT
     
 
+//SHOW
+app.get('/pokedex/:id', (req, res) => {
+    res.render('show.ejs', {poke: Pokedex[req.params.id]})
+})
 
 app.listen(PORT, () => {
     console.log(`Gotta catch'em all on port ${PORT}`)

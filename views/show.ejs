@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Pokedex</title>
+</head>
+<body>
+    <div class="container">
+        <h1>It's <%= poke.name %></h1>  
+            <img src= "<%=poke.img %>" >
+                <h2> Pokemon Type </h2>  
+                    <ul>
+                        <% for (let i = 0; i < poke.type.length; i++) { %>
+                            <li style="list-style-type: none;"><%= poke.type[i] %></li>
+                        <% } %>   
+                    </ul>    
+        <div class="stats">
+            <h2>Stats</h2>
+                <ul>
+                    <li style="list-style-type: none;">HP: <%=poke.stats.hp%></li>        
+                    <li style="list-style-type: none;">Attack: <%=poke.stats.attack%></li>
+                    <li style="list-style-type: none;">Special Attack: <%=poke.stats.spattack%></li>
+                    <li style="list-style-type: none;">Defense: <%=poke.stats.defense%></li>
+                    <li style="list-style-type: none;">Speed: <%=poke.stats.speed%></li>
+                </ul>
+        </div>
+        <div class="level">
+                
+            
+            <div class="attacks">
+
+            </div>
+        </div>
+        
+    </div> 
+    
+</body>
+</html>
