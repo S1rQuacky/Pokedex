@@ -24,7 +24,7 @@ app.get('/pokedex/', (req, res) => {
 
 //SHOW
 app.get('/pokedex/:id', (req, res) => {
-    res.render('show.ejs', {poke: Pokedex[req.params.id]})
+    res.render("show.ejs", {poke: Pokedex[req.params.id]})
 })
 
 app.listen(PORT, () => {

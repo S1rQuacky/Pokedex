@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" >
     <title>Pokedex</title>
 </head>
 <body>
-    <div class="container">
-        <h1>It's <%= poke.name %></h1>  
+    <div class="container">       
+        <h1>It's <%= poke.name %></h1>         
             <img src= "<%=poke.img %>" >
                 <h2> Pokemon Type </h2>  
                     <ul>
@@ -27,12 +27,22 @@
                     <li style="list-style-type: none;">Speed: <%=poke.stats.speed%></li>
                 </ul>
         </div>
-        <div class="level">
+        <div class="moves">
+            <table id="moves_table">
+                <h2>Moves</h2>
+                <tr>
+                    <%for (let i2 = 0; i2 < poke.moves.level.length; i2++) {%>
+
+                    <th>Name</th>
+                        <td><%=poke.moves.level[i2].name%></td>
+                    <th>Level</th>
+                        <td><%=poke.moves.level[i2].learnedat%></td>
+                </tr>
+                    <% } %>
+            </table>
                 
             
-            <div class="attacks">
-
-            </div>
+            
         </div>
         
     </div> 
