@@ -8,6 +8,7 @@
     <title>Pokedex</title>
 </head>
 <body>
+    <a href="/pokedex"><button>Home</button></a>
     <div class="container">       
         <h1>It's <%= poke.name %></h1>         
             <img src= "<%=poke.img %>" >
@@ -27,23 +28,8 @@
                     <li style="list-style-type: none;">Speed: <%=poke.stats.speed%></li>
                 </ul>
         </div>
-        <div class="moves">
-            <table id="moves_table">
-                <h2>Moves</h2>
-                <tr>
-                    <%for (let i2 = 0; i2 < poke.moves.level.length; i2++) {%>
-
-                    <th>Name</th>
-                        <td><%=poke.moves.level[i2].name%></td>
-                    <th>Level</th>
-                        <td><%=poke.moves.level[i2].learnedat%></td>
-                </tr>
-                    <% } %>
-            </table>
-                
-            
-            
-        </div>
+        
+        
         
     </div> 
     
